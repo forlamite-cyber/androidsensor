@@ -22,6 +22,11 @@ class MainActivity : AppCompatActivity() {
         webSettings.databaseEnabled = true
         webSettings.allowFileAccess = true
         webSettings.allowContentAccess = true
+        webSettings.allowFileAccessFromFileURLs = true
+        webSettings.allowUniversalAccessFromFileURLs = true
+        webSettings.mixedContentMode = WebSettings.MIXED_CONTENT_ALWAYS_ALLOW
+        webSettings.loadWithOverviewMode = true
+        webSettings.useWideViewPort = true
 
         webView.webViewClient = WebViewClient()
         webView.loadUrl("file:///android_asset/index.html")
